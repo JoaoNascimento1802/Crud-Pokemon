@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Projeto CRUD de Pokémon com React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/JoaoNascimento1802/React-Crud-Pokemon?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/JoaoNascimento1802/React-Crud-Pokemon?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/JoaoNascimento1802/React-Crud-Pokemon?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/JoaoNascimento1802/React-Crud-Pokemon?style=for-the-badge)
 
-## Available Scripts
+> Aplicação web desenvolvida em React para realizar operações CRUD (Criar, Ler, Atualizar e Deletar) em dados de Pokémon, consumindo uma API backend desenvolvida em Java.
 
-In the project directory, you can run:
+## 💻 Pré-requisitos
 
-### `npm start`
+Antes de começar, verifique se você possui os seguintes requisitos instalados em sua máquina:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [npm](https://www.npmjs.com/) (geralmente instalado com o Node.js) ou [Yarn](https://yarnpkg.com/)
+- Um navegador web moderno (Chrome, Firefox, Safari, etc.)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Certifique-se de que a API backend em Java esteja rodando e acessível. Você pode encontrar informações sobre como iniciar a API no repositório backend (se disponível) ou na documentação da API.
 
-### `npm test`
+## 🚀 Iniciando a Aplicação React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para executar a aplicação React localmente, siga estas etapas:
 
-### `npm run build`
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/JoaoNascimento1802/React-Crud-Pokemon.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd React-Crud-Pokemon
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Instale as dependências:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Com npm:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+   Ou com Yarn:
+   ```bash
+   yarn install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Inicie a aplicação React:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Com npm:
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Ou com Yarn:
+   ```bash
+   yarn start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Isso iniciará o servidor de desenvolvimento do React e abrirá a aplicação em seu navegador padrão (geralmente em http://localhost:3000).
 
-## Learn More
+## ⚙️ Configuração da API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A aplicação React fará requisições para a API Java para realizar as operações CRUD de Pokémon. Certifique-se de que a variável de ambiente que define a URL da API esteja configurada corretamente. Geralmente, essa configuração é feita em um arquivo `.env` na raiz do seu projeto React ou diretamente no código (embora não seja recomendado para produção).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Verifique os arquivos de configuração ou o código da aplicação para identificar onde a URL da API backend está definida e ajuste-a conforme necessário para que a aplicação React possa se comunicar com a sua API Java.
 
-### Code Splitting
+Exemplo de um arquivo `.env`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```env
+REACT_APP_API_BASE_URL=http://localhost:8080/api/pokemons
+```
 
-### Analyzing the Bundle Size
+## 🕹️ Utilizando a Aplicação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Após iniciar a aplicação, você poderá:
 
-### Making a Progressive Web App
+- Listar todos os Pokémon cadastrados.
+- Criar novos Pokémon, fornecendo suas informações.
+- Visualizar os detalhes de um Pokémon específico.
+- Editar as informações de um Pokémon existente.
+- Deletar um Pokémon.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+A interface do usuário deve ser intuitiva e permitir que você interaja facilmente com os dados dos Pokémon através das operações CRUD.
 
-### Advanced Configuration
+## 📫 Contribuindo para o Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contribuições são bem-vindas! Se você deseja contribuir com este projeto, siga estas etapas:
 
-### Deployment
+1. Faça um fork deste repositório.
+2. Crie uma branch para sua feature ou correção de bug:
+   ```bash
+   git checkout -b feature/nova-funcionalidade
+   ```
+   ou
+   ```bash
+   git checkout -b fix/bug-reportado
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Faça suas alterações e comite-as:
+   ```bash
+   git commit -m 'Adiciona nova funcionalidade de listagem avançada'
+   ```
+   ou
+   ```bash
+   git commit -m 'Corrige erro de renderização na tela de detalhes'
+   ```
 
-### `npm run build` fails to minify
+4. Envie suas alterações para o seu fork:
+   ```bash
+   git push origin feature/nova-funcionalidade
+   ```
+   ou
+   ```bash
+   git push origin fix/bug-reportado
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Abra um Pull Request para este repositório.
+
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+- Emanuel  
+- Kauã Marques
+
+## 📝 Licença
+
+Este projeto está sob a licença [Adicione aqui o nome da licença, se houver]. Consulte o arquivo LICENSE para obter mais detalhes.

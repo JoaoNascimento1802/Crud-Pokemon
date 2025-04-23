@@ -124,4 +124,4 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 ## 📝 Licença
 
-Este projeto está sob a licença [Adicione aqui o nome da licença, se houver]. Consulte o arquivo LICENSE para obter mais detalhes.
+Este projeto está sob a licença. Consulte o arquivo LICENSE para obter mais detalhes.

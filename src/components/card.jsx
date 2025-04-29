@@ -10,14 +10,14 @@ function Card({ pokemon }) {
       width: '180px',
       margin: '10px'
     }}>
-      <h3>{pokemon.name}</h3>
+      <h3>{pokemon.nome}</h3>
       <img 
-        src={pokemon.imageUrl} 
-        alt={pokemon.name} 
+        src={pokemon.imagemUrl}
+        alt={pokemon.nome} 
         style={{ width: '100px', height: '100px', objectFit: 'contain' }}
       />
-      <p>Tipo: {pokemon.type}</p>
-      <p># {pokemon.number}</p>
+      <p>Tipo: {pokemon.tipo}</p>
+      <p># {pokemon.numero}</p>
     </div>
   );
 }

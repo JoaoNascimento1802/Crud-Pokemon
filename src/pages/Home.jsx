@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import api from '../services/api';
+import { listarPokemons } from '../services/api'; 
 import Card from '../components/card';
 import { Link } from 'react-router-dom';
 
@@ -12,8 +12,8 @@ function Home() {
 
   const fetchPokemons = async () => {
     try {
-      const response = await api.get('/');
-      setPokemons(response.data);
+      const data = await listarPokemons(); 
+      setPokemons(data);
     } catch (error) {
       console.error('Erro ao buscar Pokémons', error);
     }
@@ -25,7 +25,7 @@ function Home() {
       <Link to="/cadastro">
         <button style={{
           marginBottom: '2rem',
-          backgroundColor: '#cc0000', /* Cor vermelha */
+          backgroundColor: '#cc0000',
           color: 'white',
           padding: '10px 20px',
           borderRadius: '5px',
@@ -35,9 +35,11 @@ function Home() {
           fontWeight: 'bold',
           transition: 'background-color 0.3s ease'
         }}
-        onMouseOver={e => e.target.style.backgroundColor = '#a30000'} /* Tom mais escuro ao passar o mouse */
+        onMouseOver={e => e.target.style.backgroundColor = '#a30000'}
         onMouseOut={e => e.target.style.backgroundColor = '#cc0000'}
-        >Cadastrar Novo Pokémon</button>
+        >
+          Cadastrar Novo Pokémon
+        </button>
       </Link>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {pokemons.map(pokemon => (

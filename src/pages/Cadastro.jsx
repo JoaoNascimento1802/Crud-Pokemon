@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import api from '../services/api';
+import { criarPokemon } from '../services/api'; 
 import { useNavigate } from 'react-router-dom';
 
 function Cadastro() {
@@ -13,7 +13,13 @@ function Cadastro() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await api.post('/', { name, type, number, imageUrl });
+      const pokemon = {
+        nome: name,
+        tipo: type,
+        numero: parseInt(number, 10),
+        imagemUrl: imageUrl
+      };
+      await criarPokemon(pokemon); 
       navigate('/');
     } catch (error) {
       console.error('Erro ao cadastrar Pokémon', error);

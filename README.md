@@ -79,7 +79,7 @@ Como alternativa, consulte a documentação do GitHub em [como criar uma solicit
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 - João Emanuel – [@JoaoNascimento1802](https://github.com/JoaoNascimento1802)
-- Kauan Marques
+- Kauan Marques – [@JDevMarquesx](https://github.com/DevMarquesx)
 
 > Projeto desenvolvido como parte do programa SENAI de formação técnica
 

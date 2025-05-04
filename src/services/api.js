@@ -17,7 +17,7 @@ export const criarPokemon = async (pokemon) => {
     nome: pokemon.nome,
     tipo: pokemon.tipo,
     numero: pokemon.numero,
-    imagemUrl: pokemon.imagemUrl, // agora enviando como string
+    imagemUrl: pokemon.imagemUrl, 
   };
 
   const response = await axios.post(API_URL, payload);
@@ -25,14 +25,14 @@ export const criarPokemon = async (pokemon) => {
 };
 
 export const atualizarPokemon = async (id, pokemon) => {
-  const payload = {
+  const params = {
     nome: pokemon.nome,
     tipo: pokemon.tipo,
     numero: pokemon.numero,
     imagemUrl: pokemon.imagemUrl,
   };
 
-  const response = await axios.put(`${API_URL}/${id}`, payload);
+  const response = await axios.put(`${API_URL}/${id}`, null, { params }); 
   return response.data;
 };
 

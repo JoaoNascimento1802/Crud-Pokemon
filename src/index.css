@@ -1,11 +1,9 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Plano de fundo */
   body {
     font-family: Arial, sans-serif;
     background-image: url('./images/basic-pokeball-cover-mcs4xg2ash4hj4e9.jpg');
@@ -16,7 +14,7 @@
   }
   
   .navbar {
-    background-color: white; /* Cor do header alterada para branco */
+    background-color: white;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -41,39 +39,37 @@
   }
   
   .nav-links li a {
-    color: black; /* Cor padrão dos links, pode ser alterada se necessário */
+    color: black;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
   }
   
   .nav-links li a.nav-button {
-    background-color: #cc0000; /* Cor vermelha para os botões */
-    color: white; /* Texto branco nos botões vermelhos */
+    background-color: #cc0000;
+    color: white;
     padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
   
   .nav-links li a.nav-button:hover {
-    background-color: #a30000; /* Tom de vermelho mais escuro ao passar o mouse */
+    background-color: #a30000;
   }
   
   .logo {
     height: 50px;
   }
   
-  /* Container da Home */
   .container {
     margin: 30px auto;
     padding: 20px;
     max-width: 1200px;
-    background: rgba(255, 255, 255, 0.8); /* fundo branco com transparência */
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  /* Cards */
   .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -110,7 +106,6 @@
     font-size: 14px;
   }
   
-  /* Botão Load More */
   .load-more-button {
     display: block;
     margin: 20px auto;
@@ -128,7 +123,6 @@
     background-color: #a30000;
   }
   
-  /* Formulário de Cadastro */
   .form-container {
     margin: 30px auto;
     padding: 20px;
@@ -169,7 +163,6 @@
     background-color: #a30000;
   }
   
-  /* Estilização do Crud */
   .crud-container {
     margin: 30px auto;
     padding: 20px;
@@ -199,7 +192,7 @@
   }
   
   .crud-container button[type="submit"] {
-    background-color: #4CAF50; /* Cor verde para o botão Salvar */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -231,7 +224,7 @@
   }
   
   .pokemon-list li button {
-    background-color: #f44336; /* Cor vermelha para o botão Excluir */
+    background-color: #f44336;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -245,26 +238,24 @@
     background-color: #d32f2f;
   }
   
-  /* Estilização do título Pokedex */
-  h1 { /* Aplica a todos os h1, seja específico se necessário */
-    font-family: 'Pokemon Solid', sans-serif; /* Garanta que a fonte está importada no seu CSS ou linkada no HTML */
-    color: #FFCB05; /* Cor amarela típica de Pokémon */
-    -webkit-text-stroke: 2px #3B5998; /* Contorno azul (cor primária do logo antigo) */
+  h1 {
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #FFCB05;
+    -webkit-text-stroke: 2px #3B5998;
     text-stroke: 2px #3B5998;
-    font-size: 2.5em; /* Ajuste o tamanho conforme necessário */
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
   }
   
-  /* Overlay cinza translúcido ao clicar no botão Cadastrar Novo Pokémon */
   .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cinza translúcido */
-    z-index: 1001; /* Garante que fique acima de outros elementos */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
     display: flex;
     justify-content: center;
     align-items: center;

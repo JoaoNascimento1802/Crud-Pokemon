@@ -1,64 +1,34 @@
-import React, { useState } from 'react';
-import { criarPokemon } from '../services/api'; 
+import { useState } from 'react';
+import { criarPokemon } from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 function Cadastro() {
-  const [name, setName] = useState('');
-  const [type, setType] = useState('');
-  const [number, setNumber] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
-
+  const [form, setForm] = useState({ nome: '', tipo: '', numero: '', imagemUrl: '' });
   const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const pokemon = {
-        nome: name,
-        tipo: type,
-        numero: parseInt(number, 10),
-        imagemUrl: imageUrl
-      };
-      await criarPokemon(pokemon); 
+      await criarPokemon({ ...form, numero: parseInt(form.numero) });
       navigate('/');
-    } catch (error) {
-      console.error('Erro ao cadastrar Pokémon', error);
+    } catch (err) {
+      console.error(err);
     }
   };
 
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Cadastrar Pokémon</h1>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '300px', margin: '0 auto' }}>
-        <input 
-          type="text" 
-          placeholder="Nome" 
-          value={name} 
-          onChange={(e) => setName(e.target.value)} 
-          required
-        />
-        <input 
-          type="text" 
-          placeholder="Tipo" 
-          value={type} 
-          onChange={(e) => setType(e.target.value)} 
-          required
-        />
-        <input 
-          type="number" 
-          placeholder="Número" 
-          value={number} 
-          onChange={(e) => setNumber(e.target.value)} 
-          required
-        />
-        <input 
-          type="text" 
-          placeholder="URL da Imagem" 
-          value={imageUrl} 
-          onChange={(e) => setImageUrl(e.target.value)} 
-          required
-        />
-        <button type="submit">Cadastrar</button>
+    <div className="container">
+      <h2 className="text-center text-danger mb-4">Cadastrar Pokémon</h2>
+      <form className="mx-auto p-4 bg-white rounded shadow" onSubmit={handleSubmit} style={{ maxWidth: '400px' }}>
+        <input className="form-control mb-3" name="nome" placeholder="Nome" value={form.nome} onChange={handleChange} required />
+        <input className="form-control mb-3" name="tipo" placeholder="Tipo" value={form.tipo} onChange={handleChange} required />
+        <input className="form-control mb-3" name="numero" type="number" placeholder="Número" value={form.numero} onChange={handleChange} required />
+        <input className="form-control mb-3" name="imagemUrl" placeholder="URL da Imagem" value={form.imagemUrl} onChange={handleChange} required />
+        <button className="btn btn-danger w-100">Cadastrar</button>
       </form>
     </div>
   );

@@ -1,23 +1,17 @@
-import React from 'react';
-
 function Card({ pokemon }) {
   return (
-    <div style={{
-      backgroundColor: '#eee',
-      borderRadius: '10px',
-      padding: '1rem',
-      textAlign: 'center',
-      width: '180px',
-      margin: '10px'
-    }}>
-      <h3>{pokemon.nome}</h3>
-      <img 
+    <div className="card shadow border-0" style={{ width: '200px', background: '#fffbea' }}>
+      <img
         src={pokemon.imagemUrl}
-        alt={pokemon.nome} 
-        style={{ width: '100px', height: '100px', objectFit: 'contain' }}
+        className="card-img-top p-3"
+        alt={pokemon.nome}
+        style={{ height: '150px', objectFit: 'contain' }}
       />
-      <p>Tipo: {pokemon.tipo}</p>
-      <p># {pokemon.numero}</p>
+      <div className="card-body text-center">
+        <h5 className="card-title text-primary">{pokemon.nome}</h5>
+        <p className="card-text">Tipo: {pokemon.tipo}</p>
+        <p className="card-text fw-bold">#{pokemon.numero}</p>
+      </div>
     </div>
   );
 }

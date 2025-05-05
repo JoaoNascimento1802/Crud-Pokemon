@@ -1,4 +1,4 @@
-# Projeto CRUD de Pokémon com React
+# Projeto CRUD de Pokemon com React
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/JoaoNascimento1802/React-Crud-Pokemon?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/JoaoNascimento1802/React-Crud-Pokemon?style=for-the-badge)

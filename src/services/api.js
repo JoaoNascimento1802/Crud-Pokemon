@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/pokemons';
+const API_URL = 'https://pokemon-brcjhebdfhdmacfs.brazilsouth-01.azurewebsites.net/pokemons';
 
 export const listarPokemons = async () => {
   const response = await axios.get(API_URL);

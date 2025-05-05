@@ -12,7 +12,7 @@
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-- Você tem o **Java 21** instalado em sua máquina.
+- Você tem o **Java 17** instalado em sua máquina.
 - Você possui o **Spring Boot** configurado.
 - O banco de dados **MySQL** está instalado e em execução.
 - Você tem um ambiente de desenvolvimento como **IntelliJ IDEA** ou **VSCode** configurado.

@@ -55,7 +55,15 @@ Para executar a aplicação React localmente, siga estas etapas:
    yarn start
    ```
 
+
 Isso iniciará o servidor de desenvolvimento do React e abrirá a aplicação em seu navegador padrão (geralmente em http://localhost:3000).
+
+Para executar a aplicação React online, siga estas etapas:
+
+1. Acesse esse link:
+```bash
+https://crudpokemon.vercel.app/
+```
 
 ## ⚙️ Configuração da API
 
@@ -66,7 +74,7 @@ Verifique os arquivos de configuração ou o código da aplicação para identif
 Exemplo de um arquivo `.env`:
 
 ```env
-REACT_APP_API_BASE_URL=http://localhost:8080/api/pokemons
+pokemon-brcjhebdfhdmacfs.brazilsouth-01.azurewebsites.net/pokemons
 ```
 
 ## 🕹️ Utilizando a Aplicação

@@ -62,7 +62,7 @@ Para executar a aplicação React online, siga estas etapas:
 
 1. Acesse esse link:
 ```bash
-https://crudpokemon.vercel.app/
+https://reactpokemon-rust.vercel.app/
 ```
 
 ## ⚙️ Configuração da API
